@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="result"></div>
+<div id="resultt"></div>
+<script type="text/babel">
+function Welcome(props){
+	return <a href="#">Hello, {props.name}</a>;
+}
+const element = <Welcome name="上海"/>;
+ReactDOM.render(
+    element,
+    document.getElementById('result')
+	);
+</script>
+<script type="text/babel">
+function A(props){
+	return <h3>Hello,{props.name}</h3>;
+}
+function App(){
+	return(
+  <div>
+  	<A name="上海" href="#"/>
+  	<A name="香港" href="#"/>
+  	<A name="新乡" href="#"/>
+  </div>
+	)
+}
+ReactDOM.render(
+   <App />,
+   document.getElementById('resultt')
+)
+</script>
+
+</body>
+</html>

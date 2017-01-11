@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+ 
+
+  <!--[if lt IE 9]>
+  <script src="html5shiv/html5shiv.min.js"></script>
+  <script src="respond/respond.min.js"></script>
+  <![endif]-->
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="qq"></div>
+</body>
+<script type="text/babel">
+const numbers=[1,2,3,4,5]
+const doubled=numbers.map((number)=> number*2)
+console.log(doubled)
+</script >
+<script type="text/babel">
+const numbers=[1,2,3,4,5]
+const listItems =numbers.map((number)=><li>{number}</li>)
+ReactDOM.render(
+    <ul>{listItems}</ul>,
+    document.getElementById('qq')
+)
+</script>
+
+</html>

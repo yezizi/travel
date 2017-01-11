@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="switch"></div>
+
+<script type="text/babel">
+class Toggle extends React.Component{
+	constructor(props){
+		super(props);
+		this.state={isToggleOn:true};
+		this.handleClick=this.handleClick.bind(this);
+		console.log(this);
+	}
+	handleClick(){
+	  this.setState(prevState=>({
+	   isToggleOn:!prevState.isToggleOn
+	  }))
+	  console.log(this);
+	}
+	render(){
+	  return(
+    <button onClick={this.handleClick}
+    className="mdl-button mdl-js-button mdl-button-raised mdl-button-accent"> 
+     {this.state.isToggleOn?'ON':'OFF'}
+     </button>
+	  )
+	}
+}
+ReactDOM.render(
+ <Toggle/>,
+ document.getElementById('switch')
+)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+  <!--[if lt IE 9]>
+  <script src="html5shiv/html5shiv.min.js"></script>
+  <script src="respond/respond.min.js"></script>
+  <![endif]-->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+ 
+  <script src="js/js.cookie-2.1.0.min.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/data.js"></script>
+<script src="react/dist/react.min.js"></script>
+<script src="react-dom/dist/react-dom.min.js"></script>
+<script src="js/babel.min.js"></script>
+<script src="js/rlogin.js" type="text/babel"></script>
+<script src="js/search1.js" type="text/babel"></script>
+</head>
+<body>
+<article class="header">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-1 col-md-3 col-xs-3 col-sm-3 text-left">
+			<div class="lead"><strong>窗外</strong></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-xs-3 col-sm-3 window">|　窗外的世界很精彩</div>
+			<div class="col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-1 two text-center">
+	    <div id="title" class="title">			
+			</div>
+			<a href="#">关注我们</a>
+			<a href="#">点评</a>
+			</div>
+		</div>
+	</div>
+</article>
+<nav class="nav nav-bar">
+	<div class="container">
+		<div class="row">
+			<ul class="col-lg-6">
+				<li><a href="index.html" class="current">首页</a></li>
+				<li><a href="#">目的地</a></li>
+				<li><a href="scenerys.html">景点</a></li>
+				<li><a href="food.html">美食</a></li>
+				<li><a href="#">游记</a></li>
+				<li><a href="#">写点评</a></li>				
+				<div class="search " id="search">			
+				<!-- <input type="text" class="form-control" id="input"> 
+				<select id="s">
+				  <option value="1">美食</option>
+          <option value="2">景点</option>
+				</select>
+				<button id="submit">搜索</button> -->
+				</div>
+			</ul>
+		</div>    
+  </div>
+</nav>	
+<div class="banner">
+<div class="b-img">
+<a href="#" style="background:url(images/sanya.jpg) center no-repeat;
+background-size: cover;"></a>
+<a href="#" style="background:url(images/lv.jpg) center no-repeat;
+background-size: cover;" ></a>
+<a href="#" style="background:url(images/bai.jpg) center no-repeat;background-size: cover;"></a>
+</div>
+<div class="b-list"></div>
+<a class="bar-left" href="#"><em></em></a>
+<a class="bar-right" href="#"><em></em></a>
+</div>
+
+<article class="region">
+    <div class="container">
+    <p class="text-left specular">景点分类</p>
+    <div class="row">
+	  	 <div class="choice col-lg-12">
+		<a href="scenerys.html?id=1&type=category" class="col-lg-3 text-center">湖泊风景区</a>
+		<a href="scenerys.html?id=2&type=category" class="col-lg-3 text-center">山岳风景区</a>
+		<a href="scenerys.html?id=3&type=category" class="col-lg-3 text-center">森林风景区</a>
+		<a href="scenerys.html?id=4&type=category" class="col-lg-3 text-center">山水风景区</a>
+		<a href="scenerys.html?id=5&type=category" class="col-lg-3 text-center">海滨风景区</a>
+		<a href="scenerys.html?id=6&type=category" class="col-lg-3 text-center">休闲疗养避暑胜地</a>
+		<a href="scenerys.html?id=7&type=category" class="col-lg-3 text-center">宗教寺庙名胜区</a>
+		<a href="scenerys.html?id=8&type=category" class="col-lg-3 text-center">革命纪念地</a>		
+	</div> 
+	</div>
+	</div>
+</article>
+
+<article class="list">
+  <div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+	    <div class="layer">
+ 	    <img src="images/balihe.jpg" height="250px" 
+		        width="300px">
+
+				<div class="comment text-center">	
+          <p><a href="scenerys.html?id=1&type=region"  class="te">东北地区</a></p>			 
+		    	<a href="#"><img src="images/luoye.jpg"></a>
+		    	<a href="#"><img src="images/luoye.jpg"></a>
+		    	<a href="#"><img src="images/luoye.jpg"></a>
+		    	<a href="#"><img src="images/luoye.jpg"></a>
+		    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            	
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/kenasi.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=2&type=region"  class="te">北部地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            	
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/xiyang.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center" >	
+				                <p><a href="scenerys.html?id=3&type=region"  class="te">西北地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            			
+		</div>
+           <div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s1.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center">	
+				          <p><a href="scenerys.html?id=4&type=region"  class="te">西部地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+           	
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s2.jpg" height="250px" 
+		        width="300px">
+		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=5&type=region"  class="te">中部地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+           		
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s3.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=6&type=region"  class="te">东部地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+           
+        </div>		
+        <div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s4.jpg" height="250px" 
+		        width="300px">
+		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=7&type=region"  class="te">东南地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s5.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=8&type=region"  class="te">南部地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            
+        </div>		
+        <div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/s6.jpg" height="250px" 
+		        width="300px">		        
+				<div class="comment text-center">	
+				                <p><a href="scenerys.html?id=9&type=region" class="te">西南地区</a></p>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="charr">10013条用户点评</a>
+				</div>
+			</div>
+            
+        </div>					
+	    </div>
+	</div>
+</article>
+
+<!-- <article class="region">
+    <div class="container">
+    <p class="text-left specular">景点推荐</p>
+    <div class="row">	
+
+	</div>
+	</div>
+</article>
+<article class="list">
+  <div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+		    <div class="layer">
+				   <img src=""  id="images0" height="250px" width="300px">		        
+					<div class="comment text-center">	
+	          <a href="#" class="te" id="titl0"></a>		
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#" class="char">10013条用户点评</a>
+					</div>
+			</div>
+            			
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="" height="250px"  id="images1
+		        width="300px">
+		        
+				<div class="comment text-center">	
+				                <a href="#" class="te" id="titl1"></a>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="char">10013条用户点评</a>
+				</div>
+			</div>
+            			
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="" height="250px" id="images2
+		        width="300px">
+		        
+						<div class="comment text-center">	
+						                <a href="#" class="te" id="titl2"></a>			 
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#" class="char">10013条用户点评</a>
+						</div>
+			  </div>
+            		
+		</div>
+  </div>
+ </div>
+</article>
+ -->
+
+<article class="region">
+    <div class="container">
+    <p class="text-left specular">热门景点</p>
+    <div class="row">	
+
+	</div>
+	</div>
+</article>
+<article class="list">
+  <div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+		    <div class="layer">
+				   <img src="images/balihe.jpg"  id="image0" height="250px" width="300px">		        
+					<div class="comment text-center">	
+	          <a href="#" class="te" id="tit0">塞纳河畔</a>		
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#"><img src="images/luoye.jpg"></a>
+			    	<a href="#" class="char">10013条用户点评</a>
+					</div>
+			</div>
+            			
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/kenasi.jpg" height="250px"  id="image1"
+		        width="300px">
+		        
+				<div class="comment text-center">	
+				                <a href="#" class="te" id="tit1">喀纳斯</a>			 
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#"><img src="images/luoye.jpg"></a>
+						    	<a href="#" class="char">10013条用户点评</a>
+				</div>
+			</div>
+            			
+		</div>
+		<div class="col-lg-4">
+		    <div class="layer">
+			   <img src="images/xiyang.jpg" height="250px" id="image2"
+		        width="300px">
+		        
+						<div class="comment text-center">	
+						                <a href="#" class="te" id="tit2">冰岛南部</a>			 
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#"><img src="images/luoye.jpg"></a>
+								    	<a href="#" class="char">10013条用户点评</a>
+						</div>
+			  </div>
+            		
+		</div>
+  </div>
+ </div>
+</article>
+<article class="food">
+     <div class="container"><p class="text-left specular">特色美食</p>
+     <div class="row">
+     	<div class="col-lg-3">
+     		<img src="" id="pic_10" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name0"></a></p>
+     		<p><a href="#" id="alias0"></a></p>
+     		<p id="taste0"></p>
+     		<p><a href="#" id="area0"></a></p>
+     		<p><a href="#" id="history0"></a></p>
+     		<p><a href="#" id="propose0"></a></p>
+     		<p><a href="#" id="intro0">
+      </a></p>
+     	</div>
+     	<div class="col-lg-3 col-lg-offset-1">
+     		<img src="" id="pic_11" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name1"></a></p>
+     		<p><a href="#" id="alias1"></a></p>
+     		<p id="taste1"></p>
+     		<p><a href="#" id="area1"></a></p>
+     		<p><a href="#" id="history1"></a></p>
+     		<p><a href="#" id="propose1"></a></p>
+     		<p><a href="#" id="intro1"></a></p>
+     	</div>
+     	<div class="col-lg-3 col-lg-offset-1">
+     		<img src="" id="pic_12" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name2"></a></p>
+     		<p><a href="#" id="alias2"></a></p>
+     		<p id="taste2"></p>
+     		<p><a href="#" id="area2"></a></p>
+     		<p><a href="#" id="history2"></a></p>
+     		<p><a href="#" id="propose2"></a></p>
+     		<p><a href="#" id="intro2"></a></p>
+     	</div>
+     	<div class="col-lg-3 ">
+     		<img src="" id="pic_13" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name3"></a></p>
+     		<p><a href="#" id="alias3"></a></p>
+     		<p id="taste3"></p>
+     		<p><a href="#" id="area3"></a></p>
+     		<p><a href="#" id="history3"></a></p>
+     		<p><a href="#" id="propose3"></a></p>
+     		<p><a href="#" id="intro3"></a></p>
+     	</div>
+     	<div class="col-lg-3 col-lg-offset-1">
+     		<img src="" id="pic_14" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name4"></a></p>
+     		<p><a href="#" id="alias4"></a></p>
+     		<p id="taste4"></p>
+     		<p><a href="#" id="area4"></a></p>
+     		<p><a href="#" id="history4"></a></p>
+     		<p><a href="#" id="propose4"></a></p>
+     		<p><a href="#" id="intro4"></a></p>
+     	</div>
+     	<div class="col-lg-3 col-lg-offset-1">
+     		<img src="" id="pic_15" height="200px" width="300px">
+     		<p class="text-center title"><a href="#" id="name5"></a></p>
+     		<p><a href="#" id="alias5"></a></p>
+     		<p id="taste5"></p>
+     		<p><a href="#" id="area5"></a></p>
+     		<p><a href="#" id="history5"></a></p>
+     		<p><a href="#" id="propose5"></a></p>
+     		<p><a href="#" id="intro5"></a></p>
+     	</div>
+     </div>	
+     </div>	
+</article>
+<article class="hot">
+  <div class="container"><p class="text-left specular">热门推荐</p>
+		<div class="row">
+		  <div class="col-lg-4 ">
+     		<img src="images/港式蛋挞.jpg" id="hpic_10" height="300px" width="400px">
+     		<div class="name">
+     			<p>Top1</p>    			
+     		</div>
+     		<p class="text-center title"><a href="#" id="hname0">港式蛋挞</a></p>     		
+     		<p id="htaste0">味道：甜而不腻</p>    		
+     		<p><a href="#" id="hpropose0">推荐人群：非糖尿病者</a></p> 
+     	</div>
+     	<div class="col-lg-4 col-lg-offset-2">
+     		<img src="images/钵仔糕.jpg" id="hpic_11" height="300px" width="400px">
+     		<div class="name">
+     		<p>Top2</p>
+     		</div>
+     		<p class="text-center title"><a href="#" id="hname1">钵仔糕</a></p>     	
+     		<p id="htaste1">味道：酸甜</p>     		
+     		<p><a href="#" id="hpropose1">推荐人群：非糖尿病者</a></p>
+     	</div>     			
+		</div>
+	</div>
+</article>
+</body>
+<script>
+	$(function(){
+		$.ajax({
+		  url:'scenery/popular/3',
+		  method:'get',
+		  dataType:'json',
+		  success:function(data,status,xhr){
+		  	  for (i=0;i<data.length;i++){
+            $('#image'+i).attr('src',data[i].pic_1);
+            $('#tit'+i).text(data[i].name);
+            $('#tit'+i).attr('href','scenery.html?id='+data[i].id);
+		      }
+		  },
+		  error:function(xhr,status,error){
+        console.log(error);
+		  }
+		})
+
+		$.ajax({
+		  url:'scenery/random',
+		  method:'get',
+		  dataType:'json',
+		  success:function(data,status,xhr){
+		  	console.log(data);
+		  	  for (i=0;i<data.length;i++){
+            $('#images'+i).attr('src',data[i].pic_1);
+            $('#titl'+i).text(data[i].name);
+            $('#titl'+i).attr('href','scenery.html?id='+data[i].id);
+		      }
+		  },
+		  error:function(xhr,status,error){
+        console.log(error);
+		  }
+		})
+	})
+</script>
+</html>

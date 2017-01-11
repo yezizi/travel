@@ -1,0 +1,47 @@
+<html>
+<head>
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+class Clock extends React.Component{
+  constructor(props){
+  super(props);
+  this.state={date:new Date()};
+  }
+
+  componentDidMount(){
+	  this.timerID=setInterval(
+    ()=>this.tick(),1000
+	  )
+  }
+  componentWillUnmount(){
+     clearInterval(this.timerID)
+  }
+  tick(){
+	  this.setState({
+	  date:new Date()
+	  })
+  }
+	render(){
+	  return(
+	  <div>
+	  <h1>上海，等我</h1>
+	  <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+	  </div>
+	  )
+	}
+}
+ReactDOM.render(
+<Clock/>,
+document.getElementById('root')
+)
+</script>
+
+</body>
+</html>

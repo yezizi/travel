@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="react/dist/react.min.js"></script>
+<script src="react-dom/dist/react-dom.min.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="nick"></div>
+
+</body>
+<script type="text/babel">
+class Nickname extends React.Component{
+	constructor(props){
+	  super(props)
+	  this.state={nickname:'1123'}
+	}
+	componentDidMount(){
+	
+	  //this.request=$.get(this.props.url,function(data){
+	  	//this.setState({nickname:data.nickname})
+	  //}.bind(this))
+	  this.setState({nickname:'3345'})
+	}
+	  componentWillUnmount(){
+	    this.request.abort();
+	  }
+	  render(){
+		  return (
+	       <div>
+	         <a href="practice.html">首页</a>
+	         <a href="second.html">{this.state.nickname}
+	         </a>
+	       </div>
+		  )
+	  }
+	}
+	ReactDOM.render(
+   <Nickname url="/test" />,
+   document.getElementById('nick')
+
+	)
+
+
+</script>
+</html>

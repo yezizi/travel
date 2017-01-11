@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="html5shiv/html5shiv.min.js"></script>
+  <script src="respond/respond.min.js"></script>
+  <![endif]-->
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="rreact/babel.min.js"></script>
+</head>
+<body>
+<div id="qq"></div>
+</body>
+<script type="text/babel">
+class UserList extends React.Componnet{
+    constructor(props){
+    supor(props)
+    this.state={list:[]}
+    }
+  componentDidMount(){
+    this.request=$.get(this.props.url,function(data){
+       console.log(data)
+       this.setState({list:data})
+    }.bind(this))
+  }
+  componentWillUnmount(){
+  this.request.abort()
+  }
+  render(){
+  <table>
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>1</th>
+        <th>1</th>
+      </tr>
+    </thead>
+    <tbody>
+      {this.state.list.map((user)=>
+        <tr>
+         <td>{userId}</td>
+         <td>{userId}</td>
+         <td>{userId}</td>
+        </tr>
+      )}
+    </tbody>
+  </table>
+  }
+}
+ReactDOM.render(
+<UserList url="user/info" />,
+document.getElementById('qq')
+
+)
+</script >
+</html>

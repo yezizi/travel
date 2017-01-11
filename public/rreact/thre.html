@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="greeting"></div>
+<script type="text/babel">
+
+class Lei extends React.Component{
+  constructor(props){
+  super(props)    
+    this.state={isLoggedIn:true}
+  }
+  
+    render (){
+      const isLoggedIn=this.state.isLoggedIn
+      return (
+        <div>
+        The user is <strong>{isLoggedIn?'currently':'not'}</strong>　
+         logged in.
+        </div>
+      )
+    }
+    
+}
+ReactDOM.render(
+<Lei />,
+document.getElementById('greeting')
+)
+</script>
+</body>
+</html>

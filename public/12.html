@@ -1,0 +1,78 @@
+﻿<script type="text/babel">
+function LoggedIn(props) {
+  return (
+    <div>
+      欢迎回来，
+      <a href="user-info.html">
+        {props.nickname}
+      </a>
+    </div>
+  )
+}
+
+function LoggedOut(props) {
+  return (
+    <div>
+      <a href="login.html">
+        请登录
+      </a>
+      &nbsp;或&nbsp;
+      <a href="register.html">
+        注册
+      </a>
+    </div>
+  )
+}
+
+class LoginControl extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {isLoggedIn: false, nickname: ''}
+  }
+
+  componentDidMount() {
+    let user = Cookies.get('user')
+    console.log(user)
+    if (user) {
+      this.request = $.get('/user/info', function (data) {
+        console.log(data)
+        this.setState({isLoggedIn: true, nickname: data.nickname})
+      }.bind(this))
+    } else {
+      this.setState({isLoggedIn: false, nickname: ''})
+    }
+  }
+
+  componentWillUnmount() {
+    this.request.abort()
+  }
+
+  render() {
+    const isLoggedIn = this.state.isLoggedIn
+    console.log(isLoggedIn)
+    let e = null
+    if (isLoggedIn) {
+      e = <LoggedIn nickname={this.state.nickname} />
+    } else {
+      e = <LoggedOut />
+    }
+    return (
+      <div>
+        {e}
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(
+  <LoginControl />,
+  document.getElementById('logg')
+)
+</script>
+    //一开始思路：若有cookie值，显示"欢迎回来"
+                没有，显示“登陆注册”
+                昵称不知如何取得
+    //如果Cookies里有值，通过ajax获取昵称，如果isLoggedIn=true,显示昵称
+      否则isLoggedIn=false,不显示昵称
+
+

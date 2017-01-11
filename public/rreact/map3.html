@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="html5shiv/html5shiv.min.js"></script>
+  <script src="respond/respond.min.js"></script>
+  <![endif]-->
+<script src="react/dist/react.js"></script>
+<script src="react-dom/dist/react-dom.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="babel.min.js"></script>
+</head>
+<body>
+<div id="qq"></div>
+</body>
+<script type="text/babel">
+function ListItem(props) {
+    return <li>{props.value * 2}</li>   
+}
+function NumberList(props){
+  const number1=props.number
+  //为什么写成props.number,props到底代表什么
+  //
+     console.log(props)
+  return(
+     <ul>
+      {number1.map((n)=>
+       <ListItem key={n.toString()} value={n*2}/>
+      )}
+     </ul>
+  )
+} 
+
+  const num=[1,2,3,4,5]
+  ReactDOM.render(
+  <NumberList number={num} />,
+  document.getElementById('qq')
+  )
+</script >
+</html>
